@@ -58,7 +58,7 @@ def odds(nums):
         >>> odds([-2, -4, -7])
         [-7]
     """
-    pass
+    return([x for x in nums if x%2!=0])
 
 
 
@@ -68,7 +68,7 @@ def positives(nums):
         >>> positives([-2, -1, 0, 1, 2])
         [1, 2]
     """
-    pass
+    return([x for x in nums if x>0])
 
 
 
@@ -78,7 +78,7 @@ def selective_stringify_nums(nums):
         >>> selective_stringify_nums([25, 91, 22, -7, -20])
         ['25', '-20']
     """
-    pass
+    return([str(x) for x in nums if x%5==0])
 
 
 
@@ -88,7 +88,7 @@ def words_not_the(sentence):
         >>> words_not_the('the quick brown fox jumps over the lazy dog')
         [5, 5, 3, 5, 4, 4, 3]
     """
-    pass
+    return([len(x) for x in sentence.split(' ') if x != "the"])
 
 
 
@@ -98,7 +98,7 @@ def vowels(word):
         >>> vowels('mathematics')
         ['a', 'e', 'a', 'i']
     """
-    pass
+    return([x for x in word if x in "aeiou"])
 
 
 
@@ -106,9 +106,10 @@ def vowels_set(word):
     """Vowels set:
     Given a string representing a word, write a set comprehension that produces a set of all the vowels in that word.
         >>> vowels_set('mathematics')
-        set(['a', 'i', 'e'])
+        {'a', 'e', 'i'}
     """
-    pass
+    return(set(x for x in word if x in "aeiou"))
+
 
 
 
@@ -118,7 +119,7 @@ def disemvowel(sentence):
         >>> disemvowel('the quick brown fox jumps over the lazy dog')
         'th qck brwn fx jmps vr th lzy dg'
     """
-    pass
+    return("".join([x for x in sentence if x not in "aeiou"]))
 
 
 
@@ -128,7 +129,7 @@ def wiggle_numbers(nums):
         >>> wiggle_numbers([72, 26, 79, 70, 20, 68, 43, -71, 71, -2])
         [144, 52, -79, 140, 40, 136, -43, 71, -71, -4]
     """
-    pass
+    return([x*2 if x%2 == 0 else -1*x for x in nums])
 
 
 
@@ -136,9 +137,9 @@ def encrypt_lol(sentence):
     """Encrypt lol:
     Given a sentence, return the setence will all it's letter transposed by 1 in the alphabet, but only if the letter is a-y.
         >>> encrypt_lol('the quick brown fox jumps over the lazy dog')
-        'uif rvjdl cspxo gpy kvnqt pwfs uif mbzy eph'
+        'uif rvjdl cspxo gpy kvnqt pwfs uif mbzz eph'
     """
-    pass
+    return("".join([chr(ord(x)+1) if x!=" " and x!="z" else x for x in sentence]))
 
 
 
