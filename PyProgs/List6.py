@@ -11,6 +11,10 @@ def main():
 
     #Type your answer here.
 
+    lst2 = [x for x in dict]
+
+    print(lst2)
+
     lst=[x.upper() for x in dict.keys() if dict[x]<5000]
 
     print(lst)
