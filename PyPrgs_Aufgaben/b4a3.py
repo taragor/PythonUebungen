@@ -1,7 +1,7 @@
 #!/bin/usr/python3
 
 def unzip(zipped):          #zip 'transponiert' die eingegebenen Matrix; erneutes zip macht die 'transposition' rückgängig
-    #liste1 = zipped[0]
+    #liste1 = zipped[0]k
     #liste2 = zipped[1]
 
     #print(liste1)
@@ -19,7 +19,7 @@ def main():
 #    add(1,2)
 
 #    add(*[5,6]) # == add(5,6) 
-
+ 
     print(unzip([(1,2,3),(4,5,6)]))
     pass
 
